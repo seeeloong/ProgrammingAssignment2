@@ -29,6 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## if there is a new matrix input (i.e. no previously calculated output, m = NULL), data will take the new matrix input by x$get()
 ## then calculate(data,...) will call the function 'calculate' defined below, to calculate inverse matrix
 ## x$setmean(m) will store the new inverse matrix as cache
+## at last, the inverse matrix 'm' will be printed as output
 
 cacheSolve <- function(x, ...) {
   m <- x$getmean()
