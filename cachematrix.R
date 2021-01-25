@@ -1,7 +1,11 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## makeCacheMatrix is a list of 4 functions, 
+## Set: which set the input matrix as an argument for later use
+## Get: retrieve input matrix for later calculation
+## Setmean: save the previously calculated inverse matrix as cache
+## Getmean: retrieve the previously calculated inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -20,7 +24,11 @@ makeCacheMatrix <- function(x = matrix()) {
   
 }
 
-## Write a short comment describing this function
+## cacheSolve is for executing the functions to calculate inverse matrix
+## if there is a matrix already stored (calculated previously), it will output the previously calculated inverse matrix
+## if there is a new matrix input (i.e. no previously calculated output, m = NULL), data will take the new matrix input by x$get()
+## then calculate(data,...) will call the function 'calculate' defined below, to calculate inverse matrix
+## x$setmean(m) will store the new inverse matrix as cache
 
 cacheSolve <- function(x, ...) {
   m <- x$getmean()
